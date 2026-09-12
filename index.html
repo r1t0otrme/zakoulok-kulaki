@@ -6,8 +6,8 @@
 <title>ЗАКАУЛОК: КУЛАКИ — DOOM по-дворовому</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#0a0a0a;color:#e8e0d0;font-family:'Courier New',monospace;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh}
-  #wrap{position:relative;width:100vw;height:100vh;max-width:1100px;max-height:700px;background:#000;border:4px solid #3a2a1a;box-shadow:0 0 60px #000}
+  body{background:#0a0a0a;color:#e8e0d0;font-family:'Courier New',monospace;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh;height:100dvh}
+  #wrap{position:relative;width:100vw;height:100vh;height:100dvh;max-width:1100px;max-height:700px;background:#000;border:4px solid #3a2a1a;box-shadow:0 0 60px #000}
   canvas{width:100%;height:100%;image-rendering:pixelated;background:#000;display:block;touch-action:none}
   #ui{position:absolute;inset:0;pointer-events:none}
   #title{position:absolute;inset:0;background:rgba(5,3,2,.93);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:auto;z-index:20;padding:20px;overflow:auto}
@@ -45,8 +45,8 @@
     #topbar{font-size:11px;padding:6px 8px}
     .stat{font-size:10px}.stat b{font-size:15px}
     #msg{font-size:11px}
-    #faceBox{width:52px;height:52px}
-    #hud{height:70px;gap:6px;padding:4px 6px}
+    #faceBox{width:48px;height:48px;flex-shrink:0}
+    #hud{height:64px;gap:6px;padding:4px 6px;overflow:hidden}
     .ph{width:110px}.ph img{width:90px;height:90px}
     #title h1{font-size:32px}
     #touchUI{bottom:80px}
@@ -60,7 +60,7 @@
 <div id="wrap">
 <canvas id="game" width="480" height="300"></canvas>
 <div id="ui">
-  <div id="topbar"><span id="tWave">ВОЛНА 1</span><span>ЗАКАУЛОК — ПАНЕЛЬКИ РФ · v8</span><span id="tKills">ФРАГИ: 0</span></div>
+  <div id="topbar"><span id="tWave">ВОЛНА 1</span><span></span><span id="tKills">ФРАГИ: 0</span></div>
   <div id="help">WASD/стрелки — идти | мышь — осмотр | ЛКМ / F / ПРОБЕЛ — удар кулаком</div>
   <div id="cross"></div>
   <div id="dmg"></div><div id="heal"></div>
@@ -75,8 +75,8 @@
     <div id="recordLine" style="font-size:26px;color:#ffcc00;text-shadow:2px 2px 0 #000;margin-bottom:4px">РЕКОРД СЕССИИ: —</div>
     <button id="startBtn" style="margin-top:4px">▶ СТАРТ</button>
     <div id="photos" style="margin-top:14px">
-      <div class="ph"><img src="текстуры/friend 1/открытые глаза.png"><br>ГЕРОЙ — друг 1<br>(думгай-портрет)</div>
-      <div class="ph"><img src="текстуры/спрайты/средний.png" style="border-color:#a00"><br>ДЕМОН — друг 2<br>слабый/средний/сильный</div>
+      <div class="ph"><img src="текстуры/friend 1/открытые глаза.png"></div>
+      <div class="ph"><img src="текстуры/спрайты/средний.png" style="border-color:#a00"></div>
     </div>
     <p id="loadInfo" style="font-size:11px;color:#777"></p>
   </div>
